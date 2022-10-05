@@ -14,6 +14,14 @@ use Illuminate\Support\Facades\Hash;
 class BranceController extends Controller
 {
 
+    function __construct()
+    {
+         $this->middleware('permission:brance-list|brance-create|brance-edit|brance-delete', ['only' => ['index','store']]);
+         $this->middleware('permission:brance-create', ['only' => ['create','store']]);
+         $this->middleware('permission:brance-edit', ['only' => ['edit','update']]);
+         $this->middleware('permission:brance-delete', ['only' => ['destroy']]);
+    }
+
     public function adminindex(){
         $employees         = Employee::with('brance','brancelocation')->get();
         $inactiveemployees = Employee::where('Status','0')->get();

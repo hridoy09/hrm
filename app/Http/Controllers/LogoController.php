@@ -9,6 +9,14 @@ use Illuminate\Http\Request;
 
 class LogoController extends Controller
 {
+
+    function __construct()
+    {
+         $this->middleware('permission:web-list|web-create|web-edit|web-delete', ['only' => ['index','store']]);
+         $this->middleware('permission:web-create', ['only' => ['create','store']]);
+         $this->middleware('permission:web-edit', ['only' => ['edit','update']]);
+         $this->middleware('permission:web-delete', ['only' => ['destroy']]);
+    }
     /**
      * Display a listing of the resource.
      *

@@ -99,18 +99,18 @@
 <div class="logo-box">
     <a class="logo logo-light text-center" href="" @disabled(true)>
         <span class="logo-sm">
-            <img src="{{asset('admin/logo')}}/{{$logo->small_logo }}" alt="" height="auto" width="60%">
+            <img src="{{asset('admin/logo')}}/{{@$logo->small_logo }}" alt="" height="auto" width="60%">
         </span>
         <span class="logo-lg">
-            <img src="{{asset('admin/logo')}}/{{$logo->lg_logo }}" alt="" height="auto" width="50%">
+            <img src="{{asset('admin/logo')}}/{{@$logo->lg_logo }}" alt="" height="auto" width="50%">
         </span>
     </a>
     <a class="logo logo-dark text-center" href="" @disabled(true)>
         <span class="logo-sm">
-            <img src="{{asset('admin/logo')}}/{{$logo->small_logo }}" alt="" height="auto" width="60%">
+            <img src="{{asset('admin/logo')}}/{{@$logo->small_logo }}" alt="" height="auto" width="60%">
         </span>
         <span class="logo-lg">
-            <img src="{{asset('admin/logo')}}/{{$logo->lg_logo }}" alt="" height="auto" width="70%">
+            <img src="{{asset('admin/logo')}}/{{@$logo->lg_logo }}" alt="" height="auto" width="70%">
         </span>
     </a>
 </div>

@@ -118,6 +118,21 @@
                             </ul>
                         </div>
                     </li>
+                    <li>
+                        <a href="{{URL::to('admin/users')}}">
+                            <i class="fas fa-user"></i>
+
+                            <span>Users Managment </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{URL::to('admin/roles')}}">
+                            <i class="fab fa-critical-role"></i>
+
+                            <span>Roles Managment </span>
+                        </a>
+                    </li>
+
 
 
                 </ul>
